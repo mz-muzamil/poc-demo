@@ -1,7 +1,7 @@
 const ServiceOne = () => {
   return (
     <>
-      <div className="container mx-auto">Service one</div>
+      <div className="container mx-auto">Service Link One</div>
     </>
   );
 };

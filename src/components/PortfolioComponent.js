@@ -1,7 +1,7 @@
 const PortfolioComponent = () => {
   return (
     <>
-      <div className="container mx-auto">Portfolio </div>
+      <div className="container mx-auto">MarketPlace </div>
     </>
   );
 };

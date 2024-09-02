@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import MobileNavigation from "./MobileNavigation";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo-main.png";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -32,16 +32,30 @@ const Header = () => {
       href: "/services",
       submenu: [
         {
-          name: "Service One",
+          name: "Service Link One",
           href: "/service-one",
         },
         {
-          name: "Service two",
+          name: "Service Link Two",
           href: "/service-two",
         },
       ],
     },
-    { name: "Portfolio", href: "/portfolio" },
+    { name: "MarketPlace", href: "/marketplace" },
+    {
+      name: "Carriers",
+      href: "/carriers",
+      submenu: [
+        {
+          name: "FedEx",
+          href: "/fedex",
+        },
+        {
+          name: "Worldwide Express",
+          href: "/worldwide-express",
+        },
+      ],
+    },
     { name: "About Us", href: "/about-us" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -58,7 +72,7 @@ const Header = () => {
             <div className="flex w-full items-center justify-between">
               <div className="flex-shrink-0">
                 <Link to="/">
-                  <img src={logo} alt="logo" />
+                  <img className="w-52" src={logo} alt="logo" />
                 </Link>
               </div>
               <div className="hidden lg:block ml-10">
@@ -67,12 +81,12 @@ const Header = () => {
                     {navigation.map((item, index) => (
                       <li
                         key={index}
-                        className="relative px-5 py-9 group transition duration-300"
+                        className="relative ml-5 py-9 group transition duration-300"
                       >
                         <Link
                           to={item.href}
                           className={classNames(
-                            "font-semibold uppercase text-base transition delay-75 duration-150 ease-in-out"
+                            "font-semibold text-base transition delay-75 duration-150 ease-in-out"
                           )}
                         >
                           {item.name}
@@ -80,7 +94,7 @@ const Header = () => {
 
                         {item.submenu && (
                           <>
-                            <ul className="absolute z-40 top-full w-[350px] bg-white shadow-2xl p-4 border border-gray-200 opacity-0 invisible transition-all duration-600 transform translate-y-2 group-hover:-translate-y-2 group-hover:opacity-100 group-hover:visible">
+                            <ul className="absolute z-40 top-full w-[200px] bg-white shadow-2xl p-4 border border-gray-200 opacity-0 invisible transition-all duration-600 transform translate-y-2 group-hover:-translate-y-2 group-hover:opacity-100 group-hover:visible">
                               {item.submenu.map((subItem, subIndex) => (
                                 <li
                                   key={subIndex}

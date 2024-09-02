@@ -10,6 +10,7 @@ import ServiceOne from "./components/ServiceOne";
 import ServiceTwo from "./components/ServiceTwo";
 import PortfolioComponent from "./components/PortfolioComponent";
 import ContactUsComponent from "./components/ContactUsComponent";
+import CarriersComponent from "./components/CarriersComponent";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <Route path="/service-one" element={<ServiceOne />} />
             <Route path="/service-two" element={<ServiceTwo />} />
             <Route path="/about-us" element={<AboutUsComponent />} />
-            <Route path="/portfolio" element={<PortfolioComponent />} />
+            <Route path="/marketplace" element={<PortfolioComponent />} />
+            <Route path="/carriers" element={<CarriersComponent />} />
             <Route path="/contact" element={<ContactUsComponent />} />
             <Route path="/post/:id" element={<PostDetail />} />
           </Routes>
