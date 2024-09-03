@@ -61,7 +61,7 @@ const HomeComponent = () => {
 
   return (
     <>
-      <div className="container mx-auto">
+      <div className="xl:container lg:mx-auto px-6">
         {loading ? (
           <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 mb-10">
             <EmptyCardSkeleton count={12} />
